@@ -4,6 +4,5 @@
 # -------------------------------------
 
 /opt/docker/install.sh && echo "Install Ok"
-#Com obrim els ports priveliggitas?
-/sbin/slapd -d0  && echo "slapd Ok"
+/sbin/slapd -d0 -u ldap -h "ldap:/// ldaps:/// ldapi:///" && echo "slapd Ok"
 
